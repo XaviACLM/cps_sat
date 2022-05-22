@@ -50,8 +50,7 @@ class SatProblem(SatFormula):
     def new_var(self, name=None):
         self._var_creation_counter += 1
         v = self._var_creation_counter
-        if name is not None:
-            self.names[v] = name
+        self.names[v] = name
         return Variable(v)
 
     def write_to(self, filestream):
